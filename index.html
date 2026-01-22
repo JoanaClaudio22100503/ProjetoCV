@@ -1,13 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo Online</title>
+    <title>CV - Joana Cláudio</title>
+    <style>
+        :root {
+            --primary: #2563eb; /* Azul profissional */
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        body { background-color: var(--light); color: var(--text); line-height: 1.6; }
+
+        /* Header */
+        header { background-color: var(--dark); color: var(--white); padding: 2rem 1rem; text-align: center; }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        .contact-info { margin-top: 1rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .contact-info a { color: var(--white); text-decoration: none; font-weight: bold; border: 1px solid rgba(255,255,255,0.3); padding: 5px 15px; border-radius: 20px; transition: 0.3s; }
+        .contact-info a:hover { background-color: var(--primary); border-color: var(--primary); }
+
+        /* Container */
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* Sections */
+        section { background: var(--white); padding: 2rem; margin-bottom: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h2 { color: var(--primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-bottom: 1.5rem; text-transform: uppercase; font-size: 1.2rem; letter-spacing: 1px; }
+
+        /* About */
+        .bio { font-style: italic; color: #475569; border-left: 4px solid var(--primary); padding-left: 1rem; }
+
+        /* Skills */
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+        .skill-tag { background-color: #e0f2fe; color: #0369a1; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; }
+
+        /* Projects */
+        .project-card { border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem; transition: transform 0.2s; }
+        .project-card:hover { transform: translateY(-3px); border-color: var(--primary); }
+        .project-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; }
+        .grade-badge { background-color: #dcfce7; color: #166534; padding: 2px 10px; border-radius: 12px; font-size: 0.85rem; font-weight: bold; }
+        .tech-stack { font-size: 0.85rem; color: #64748b; margin-bottom: 1rem; }
+        .btn-link { display: inline-block; background-color: var(--primary); color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-size: 0.9rem; margin-top: 10px; }
+        .btn-link:hover { background-color: #1d4ed8; }
+
+        /* Education & Grades */
+        .edu-item { margin-bottom: 1.5rem; }
+        .edu-item h3 { font-size: 1.1rem; color: var(--dark); }
+        .edu-date { color: #64748b; font-size: 0.9rem; margin-bottom: 0.5rem; display: block; }
+        
+        .grades-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
+        .grades-table th, .grades-table td { text-align: left; padding: 8px; border-bottom: 1px solid #f1f5f9; }
+        .grades-table th { color: var(--primary); }
+        .high-score { font-weight: bold; color: var(--dark); }
+
+        /* Footer */
+        footer { text-align: center; color: #64748b; margin-top: 3rem; font-size: 0.9rem; padding-bottom: 2rem; }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .contact-info { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>Joana Cláudio</h1>
+        <p>Estudante de Engenharia Informática</p>
+        <div class="contact-info">
+            <a href="mailto:j.l.c.claudio@gmail.com">j.l.c.claudio@gmail.com</a>
+            <a href="tel:+351912977363">912 977 363</a>
+            <a href="https://github.com/joanaclaudio" target="_blank">GitHub</a>
+            </div>
     </header>
+
+    <div class="container">
+        
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p class="bio">
+                Estudante de Engenharia Informática, motivada para ingressar no mercado de trabalho e colocar em prática os conhecimentos académicos de programação e desenvolvimento de software. Procuro uma oportunidade onde possa aprender com profissionais experientes e contribuir para projetos reais.
+            </p>
+        </section>
+
+        <section id="competencias">
+            <h2>Competências Técnicas</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">HTML & CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">IntelliJ IDEA</span>
+                <span class="skill-tag">Microsoft Office</span>
+                <span class="skill-tag">Inglês (B1)</span>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos em Destaque</h2>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Desenvolvimento de Interfaces Web (Cidade)</h3>
+                    <span class="grade-badge">Nota: 20 valores</span>
+                </div>
+                <p class="tech-stack">HTML, CSS, JavaScript</p>
+                <p>Criação de um website interativo sobre uma cidade.</p>
+                <a href="https://joanaclaudio.github.io/lab6/index.html" target="_blank" class="btn-link">Ver Projeto</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Aplicação de Dados Musicais</h3>
+                    <span class="grade-badge">Nota: 19,4 valores</span>
+                </div>
+                <p class="tech-stack">Java, Algoritmia</p>
+                <p>Aplicação para consulta e análise estatística de dados musicais, com foco na otimização de algoritmos e estruturas de dados.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Portfólio em Django</h3>
+                    <span class="grade-badge">Nota: 18,2 valores</span>
+                </div>
+                <p class="tech-stack">Django, Python, API RESTful, JS</p>
+                <p>Desenvolvimento de um projeto web completo incluindo back-end e API.</p>
+                <a href="https://a22100503.pw.deisi.ulusofona.pt/portfolio/sobre/" target="_blank" class="btn-link">Ver Projeto</a>
+            </div>
+        </section>
+
+        <section id="formacao">
+            <h2>Formação Académica</h2>
+            
+            <div class="edu-item">
+                <h3>Licenciatura em Engenharia Informática</h3>
+                <span class="edu-date">Universidade Lusófona de Lisboa | 09/2021 - Atual</span>
+                
+                <p style="margin-top: 10px; font-weight: bold; color: #334155;">Destaque de Qualificações:</p>
+                <table class="grades-table">
+                    <tr><td>Fundamentos de Programação (Kotlin)</td> <td class="high-score">17 val.</td></tr>
+                    <tr><td>Probabilidade e Estatística</td> <td class="high-score">17 val.</td></tr>
+                    <tr><td>Programação Web (Python)</td> <td class="high-score">16 val.</td></tr>
+                    <tr><td>Bases de Dados</td> <td class="high-score">16 val.</td></tr>
+                    <tr><td>Arquitetura de Computadores</td> <td class="high-score">15 val.</td></tr>
+                    <tr><td>Desenvolvimento Interfaces Web</td> <td class="high-score">15 val.</td></tr>
+                </table>
+            </div>
+
+            <div class="edu-item">
+                <h3>Assistente de Contabilidade</h3>
+                <span class="edu-date">SA Formação | 10/2018 - 05/2019</span>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Joana Cláudio - Lisboa, Portugal</p>
+    </footer>
+
 </body>
 </html>
