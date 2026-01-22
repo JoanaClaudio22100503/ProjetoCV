@@ -49,9 +49,12 @@
         .btn-link:hover { background-color: #1d4ed8; }
 
         /* Education & Grades */
-        .edu-item { margin-bottom: 1.5rem; }
+        .edu-item { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #f1f5f9; }
+        .edu-item:last-child { border-bottom: none; }
         .edu-item h3 { font-size: 1.1rem; color: var(--dark); }
-        .edu-date { color: #64748b; font-size: 0.9rem; margin-bottom: 0.5rem; display: block; }
+        .edu-institution { font-weight: 600; color: #475569; }
+        .edu-date { color: #64748b; font-size: 0.9rem; display: block; margin-bottom: 0.5rem; }
+        .edu-details { font-size: 0.95rem; color: #334155; margin-top: 0.5rem; }
         
         .grades-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
         .grades-table th, .grades-table td { text-align: left; padding: 8px; border-bottom: 1px solid #f1f5f9; }
@@ -77,7 +80,7 @@
             <a href="mailto:j.l.c.claudio@gmail.com">j.l.c.claudio@gmail.com</a>
             <a href="tel:+351912977363">912 977 363</a>
             <a href="https://github.com/joanaclaudio" target="_blank">GitHub</a>
-            </div>
+        </div>
     </header>
 
     <div class="container">
@@ -142,7 +145,8 @@
             
             <div class="edu-item">
                 <h3>Licenciatura em Engenharia Informática</h3>
-                <span class="edu-date">Universidade Lusófona de Lisboa | 09/2021 - Atual</span>
+                <span class="edu-institution">Universidade Lusófona de Lisboa</span>
+                <span class="edu-date">09/2021 - Atual</span>
                 
                 <p style="margin-top: 10px; font-weight: bold; color: #334155;">Destaque de Qualificações:</p>
                 <table class="grades-table">
@@ -157,8 +161,18 @@
 
             <div class="edu-item">
                 <h3>Assistente de Contabilidade</h3>
-                <span class="edu-date">SA Formação | 10/2018 - 05/2019</span>
+                <span class="edu-institution">Centro de Formação - SA Formação</span>
+                <span class="edu-date">10/2018 - 05/2019</span>
+                <p class="edu-details">Duração: 51 horas de curso.</p>
             </div>
+
+            <div class="edu-item">
+                <h3>Formação Modular Base - Nível 3</h3>
+                <span class="edu-institution">Centro de Formação - SA Formação</span>
+                <span class="edu-date">05/2018 - 05/2019</span>
+                <p class="edu-details">Equivalência ao 11º e 12º ano de escolaridade.</p>
+            </div>
+
         </section>
 
     </div>
